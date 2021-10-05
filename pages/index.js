@@ -14,13 +14,6 @@ export default function Home({ data }) {
   const [momentSlice, setMomentSlice] = useState(4);
   const [soldSlice, setSoldSlice] = useState(4);
 
-  // const [cart, setCart] = useState();
-  // const [loading, setLoading] = useState(true);
-
-  // useEffect(() => {
-  //   setCart(JSON.parse(localStorage.getItem("cart")));
-  //   setLoading(false);
-  // }, []);
 
   const SeeMore = (name) => {
     if (name == "sold") {

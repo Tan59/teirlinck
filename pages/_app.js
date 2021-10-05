@@ -11,27 +11,6 @@ import { DownOutlined } from '@ant-design/icons';
 import CookieConsent from "react-cookie-consent";
 
 
-// function MyApp({ Component, pageProps }) {
-//   const [loading, setLoading] = useState(true);
-
-//   let cart = { items: [], total: 0 };
-
-//   useEffect(() => {
-//     if (!localStorage.getItem("cart")) {
-//       localStorage.setItem("cart", JSON.stringify(cart));
-//     }
-//     setLoading(false);
-//   });
-
-//   if (loading) {
-//     return <p>Chargement en cours...</p>;
-//   }
-
-//   return <Component {...pageProps} />;
-// }
-
-// export default MyApp;
-
 function MyApp({ Component, pageProps }) {
 
   const router = useRouter();
@@ -132,21 +111,21 @@ function MyApp({ Component, pageProps }) {
   }
 
   const cookieBar = () => {
-    if(token){
+    if (token) {
       return (
         <CookieConsent
-        location="bottom"
-        buttonText="Accepter"
-        setDeclineCookie={false}
-        enableDeclineButton
-        declineButtonText="Refuser"
-        style={{ background: "#222222" }}
-        onDecline={() => {
-          cookieCutter.set('token', '', { expires: new Date(0) })
-          setToken()
-        }}
-      >
-        Ce site utilise un cookie de connexion nécessaire, si vous refusez celui ci vous serez alors déconnecté ! </CookieConsent>
+          location="bottom"
+          buttonText="Accepter"
+          setDeclineCookie={false}
+          enableDeclineButton
+          declineButtonText="Refuser"
+          style={{ background: "#222222" }}
+          onDecline={() => {
+            cookieCutter.set('token', '', { expires: new Date(0) })
+            setToken()
+          }}
+        >
+          Ce site utilise un cookie de connexion nécessaire, si vous refusez celui ci vous serez alors déconnecté ! </CookieConsent>
       )
     }
   }
@@ -171,7 +150,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <Fragment>
-      
+
       <Head>
         <title>Boucherie Teirlinck</title>
         <link rel="icon" href="/favicon.ico"></link>

@@ -8,20 +8,6 @@ import jwt from "jsonwebtoken";
 
 const panier = ({ cart, setCart, token }) => {
 
-    // const [panier, setPanier] = useState();
-    // const [loading, setLoading] = useState(true);
-    // // const [newQuantity, setNewQuantity] = useState();
-
-    // useEffect(() => {
-    //     setPanier(JSON.parse(localStorage.getItem('cart')));
-    //     setLoading(false);
-    // }, []);
-
-    // useEffect(() => {
-    //     localStorage.setItem('cart', JSON.stringify(panier));
-
-    // }, [panier]);
-
 
     const itemPrice = (price, quantity, type) => {
 
@@ -97,7 +83,7 @@ const panier = ({ cart, setCart, token }) => {
                         placement: "topRight",
                         duration: 0
                     });
-    
+
                     let newPanier = cart;
                     newPanier = { items: [], total: 0 };
                     setCart({
@@ -111,7 +97,7 @@ const panier = ({ cart, setCart, token }) => {
                         placement: "topRight"
                     });
                 }
-                
+
             } else {
                 notification['warning']({
                     message: "Attention !",

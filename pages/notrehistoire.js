@@ -7,20 +7,6 @@ import team from "../team";
 
 export const OurStory = () => {
 
-    // const [cart, setCart] = useState();
-    // const [loading, setLoading] = useState(true);
-
-    // useEffect(() => {
-    //     setCart(JSON.parse(localStorage.getItem('cart')));
-    //     setLoading(false);
-    // }, []);
-
-    // if (loading) {
-    //     return (
-    //         <p>Chargement en cours !</p>
-    //     )
-    // }
-
     const renderTeam = () => {
         const listTeam = team.map((item) => {
             return (
@@ -66,7 +52,7 @@ export const OurStory = () => {
                         />
 
                         <Col className="ourstoryText" span={22}>
-                            <p>La boucherie Teirlinck, située au 30 rue de Condé à Lille, est tenue par Alexandre Teirlinck et existe depuis 3 générations (1930).</p> 
+                            <p>La boucherie Teirlinck, située au 30 rue de Condé à Lille, est tenue par Alexandre Teirlinck et existe depuis 3 générations (1930).</p>
                             <p>Toutes nos charcuteries sont confectionnées avec les recettes du grand-père d'Alexandre, et nos viandes sont issues d'animaux élevés dans notre région, dans le respect des normes et de la qualité.</p>
                         </Col>
                     </Row>
